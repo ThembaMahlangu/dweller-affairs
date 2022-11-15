@@ -36,7 +36,7 @@ const FeaturedItem = ({ property }) => {
           <Property.Text>
             {property.type === "rental" ? "Rent" : "Sale"}
           </Property.Text>
-          <Property.Text>Ksh {property.price}</Property.Text>
+          <Property.Text>R {property.price}</Property.Text>
         </Property.FeaturedInfo>
       </Property.ItemRight>
     </Property.FeaturedItem>

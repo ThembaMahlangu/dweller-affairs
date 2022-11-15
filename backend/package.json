@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "server": "nodemon server.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "client": "npm start --prefix frontend"
   },
   "author": "",
   "license": "MIT",

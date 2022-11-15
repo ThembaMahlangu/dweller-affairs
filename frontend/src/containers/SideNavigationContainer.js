@@ -22,8 +22,8 @@ const SideNavigationContainer = ({
           />
         </SideNavigation.Cross>
         <SideNavigation.Header>
-          <SideNavigation.Title>Real Home</SideNavigation.Title>
-          <SideNavigation.Text>The Home You Deserve</SideNavigation.Text>
+          <SideNavigation.Title>Dweller Affairs</SideNavigation.Title>
+          <SideNavigation.Text>Renting made simple</SideNavigation.Text>
         </SideNavigation.Header>
 
         <SideNavigation.Links>
@@ -36,8 +36,8 @@ const SideNavigationContainer = ({
               </SideNavigation.ListItem>
             ))}
             <SideNavigation.ListItem>
-              <SideNavigation.Anchor to="/add-listing">
-                Add Listing
+              <SideNavigation.Anchor to="/dashboard">
+                Admin Dashboard
               </SideNavigation.Anchor>
             </SideNavigation.ListItem>
           </SideNavigation.List>

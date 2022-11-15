@@ -1,10 +1,10 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Switch } from "react-router-dom";
 import {
   Home,
   Agents,
   Listings,
   Login,
-  Signup,
+  Register,
   Forgot,
   Agentt,
   Listing,
@@ -28,7 +28,7 @@ const App = () => {
         <Route exact path="/agent/:id" component={Agentt} />
         <Route exact path="/property/:id" component={Listing} />
         <Route exact path="/login" component={Login} />
-        <Route exact path="/signup" component={Signup} />
+        <Route exact path="/register" component={Register} />
         <Route exact path="/forgot-password" component={Forgot} />
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/profile" component={UserProfile} />

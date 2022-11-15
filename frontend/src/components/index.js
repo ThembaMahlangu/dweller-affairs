@@ -8,8 +8,6 @@ export { default as Agents } from "./agents";
 export { default as Section } from "./sections";
 export { default as Grid } from "./grid";
 export { default as Footer } from "./footer";
-export { default as Login } from "./login";
-export { default as Signup } from "./signup";
 export { default as Forgot } from "./forgot";
 export { default as Property } from "./property";
 export { default as Agent } from "./agent";

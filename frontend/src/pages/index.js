@@ -3,7 +3,7 @@ export { default as Listings } from "./listings";
 export { default as Agentt } from "./agent";
 export { default as Agents } from "./agents";
 export { default as Login } from "./login";
-export { default as Signup } from "./signup";
+export { default as Register } from "./register";
 export { default as Forgot } from "./forgot";
 export { default as Listing } from "./property";
 export { default as Dashboard } from "./dashboard";

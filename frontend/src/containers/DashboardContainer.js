@@ -46,7 +46,7 @@ const DashboardContainer = ({ title, children }) => {
                 if (url.subUrl) {
                   return <LinksWithSubLinks key={url.name} url={url} />;
                 }
-                return <Links url={url.name} url={url} />;
+                return <Links url={url.name} />;
               })}
             </Dashboard.List>
           </Dashboard.LeftContent>

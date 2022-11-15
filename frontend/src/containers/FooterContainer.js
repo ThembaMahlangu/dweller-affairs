@@ -22,7 +22,7 @@ const FooterContainer = () => {
               </Footer.ListItem>
               <Footer.ListItem>
                 <Footer.Icon name="far fa-envelope" social="true" />
-                <Footer.Text>info@dwelleraffairs</Footer.Text>
+                <Footer.Text>info@dwelleraffairs.co.za</Footer.Text>
               </Footer.ListItem>
             </Footer.List>
           </Footer.Item>
