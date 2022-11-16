@@ -1,10 +1,22 @@
 import React, { useState } from "react";
 import links from "../constants/routes/nav-links";
 import { HeaderWrapper, Banner, Jumbotron } from "../components";
-
+import { useSelector, useDispatch } from "react-redux";
+import { logout, reset } from "../features/auth/authSlice";
+import { Link, useNavigate } from "react-router-dom";
 import { AdvancedSearchContainer, SideNavigationContainer } from "./index";
+import { FaSignOutAlt } from "react-icons/fa";
+
 
 const HeaderContainer = ({ bg, source }) => {
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
+  const {user} = useSelector((state) => state.auth)
+  const onLogout = () => {
+    dispatch(logout())
+    dispatch(reset())
+    navigate('/')
+  }
   const [sideNavShown, setSideNavShown] = useState(false);
   const [sideNavHidden, setSideNavHidden] = useState(true);
   const [fixed, setFixed] = useState(false);
@@ -34,6 +46,15 @@ const HeaderContainer = ({ bg, source }) => {
           </HeaderWrapper.Title>
           <HeaderWrapper.LinksContainer>
             <HeaderWrapper.List links="links">
+            {user ? (
+              <ul>
+                <li>
+                  <button className="btn" onClick={onLogout}>
+                    <FaSignOutAlt /> Logout
+                  </button>
+                </li>
+              </ul>
+            ) : (<>
               {links.map((link) => (
                 <HeaderWrapper.Item key={link.to}>
                   <HeaderWrapper.Anchor bg={bg} fixed={fixed} to={`${link.to}`}>
@@ -41,6 +62,8 @@ const HeaderContainer = ({ bg, source }) => {
                   </HeaderWrapper.Anchor>
                 </HeaderWrapper.Item>
               ))}
+            </>)}
+   
             </HeaderWrapper.List>
             <HeaderWrapper.List>
               <HeaderWrapper.Item>

@@ -24,22 +24,22 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/agents" element={<Agents />} />
-        <Route path="/listing" element={<Listings />} />
-        <Route path="/agent/:id" element={<Agentt />} />
-        <Route path="/property/:id" element={<Listing />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/forgot-password" element={<Forgot />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/profile" element={<UserProfile />} />
-        <Route path="/messages" element={<Messages />} />
-        <Route path="/change-password" element={<Password />} />
-        <Route path="/add-listing/:id?" element={<AddLisiting />} />
-        <Route path="/all-listing" element={<AdminListingList />} />
-        <Route path="/all-agents" element={<AdminAgentsList />} />
-        <Route path="/mylisting" element={<AgentListing />} />
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/agents" element={<Agents />} />
+        <Route exact path="/listing" element={<Listings />} />
+        <Route exact path="/agent/:id" element={<Agentt />} />
+        <Route exact path="/property/:id" element={<Listing />} />
+        <Route exact path="/login" element={<Login />} />
+        <Route exact path="/register" element={<Register />} />
+        <Route exact path="/forgot-password" element={<Forgot />} />
+        <Route exact path="/dashboard" element={<Dashboard />} />
+        <Route exact path="/profile" element={<UserProfile />} />
+        <Route exact path="/messages" element={<Messages />} />
+        <Route exact path="/change-password" element={<Password />} />
+        <Route exact path="/add-listing/:id?" element={<AddLisiting />} />
+        <Route exact path="/all-listing" element={<AdminListingList />} />
+        <Route exact path="/all-agents" element={<AdminAgentsList />} />
+        <Route exact path="/mylisting" element={<AgentListing />} />
       </Routes>
     </Router>
   );
