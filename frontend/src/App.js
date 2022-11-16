@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import {
@@ -23,24 +23,24 @@ import {
 const App = () => {
   return (
     <Router>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/agents" component={Agents} />
-        <Route exact path="/listing" component={Listings} />
-        <Route exact path="/agent/:id" component={Agentt} />
-        <Route exact path="/property/:id" component={Listing} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/register" component={Register} />
-        <Route exact path="/forgot-password" component={Forgot} />
-        <Route exact path="/dashboard" component={Dashboard} />
-        <Route exact path="/profile" component={UserProfile} />
-        <Route exact path="/messages" component={Messages} />
-        <Route exact path="/change-password" component={Password} />
-        <Route path="/add-listing/:id?" component={AddLisiting} />
-        <Route exact path="/all-listing" component={AdminListingList} />
-        <Route exact path="/all-agents" component={AdminAgentsList} />
-        <Route exact path="/mylisting" component={AgentListing} />
-      </Switch>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/agents" element={<Agents />} />
+        <Route path="/listing" element={<Listings />} />
+        <Route path="/agent/:id" element={<Agentt />} />
+        <Route path="/property/:id" element={<Listing />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/forgot-password" element={<Forgot />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/profile" element={<UserProfile />} />
+        <Route path="/messages" element={<Messages />} />
+        <Route path="/change-password" element={<Password />} />
+        <Route path="/add-listing/:id?" element={<AddLisiting />} />
+        <Route path="/all-listing" element={<AdminListingList />} />
+        <Route path="/all-agents" element={<AdminAgentsList />} />
+        <Route path="/mylisting" element={<AgentListing />} />
+      </Routes>
     </Router>
   );
 };
