@@ -1,23 +1,46 @@
-# Dweller Affairs Website
+# Getting Started with Create React App and Redux
 
-This is a website build using react and redux for state management. I used the compound component pattern of react. This website includes both the user and admin UI.. All the data used in this website is from a local files
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
+## Available Scripts
 
-## In the file system - folder dev-data you will find
+In the project directory, you can run:
 
-- agents.js - which include agents or users data
-- listing.js - which includes properties data
-- messages.js - which includes inbox messages data.
+### `npm start`
 
-# Dependencies
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-- React Router Dom
-- Redux
-- React-redux
-- Styled Components(macro)
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-Am looking for willing collaborators to build and intergrate a Rest API using node and express framework. This will be purely for learning from each other purpose
+### `npm test`
 
-Having experience with online team would really help me out.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-If you are willing to collaborate please contact me through.Email **castercodes@gmail.com**
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
