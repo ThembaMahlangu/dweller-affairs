@@ -1,32 +1,68 @@
-import '../header.css'
-import React, { useState } from "react";
-import Home from '../pages/Home'
-import Accomodation from '../pages/Accomodation'
-import FeedBack from '../pages/Feedback'
-import About from '../pages/About'
-import Register from '../pages/Register'
-import Login from '../pages/Login'
-import HowItWorks from './HowItWorks';
+import { FaSignInAlt, FaSignOutAlt, FaUser, FaRegQuestionCircle, FaRegBuilding, FaRegCommentDots, FaLandmark } from 'react-icons/fa'
+import { Link, useNavigate } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
+import { logout, reset } from '../features/auth/authSlice'
 
 function Header() {
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
+  const { user } = useSelector((state) => state.auth)
+
+  const onLogout = () => {
+    dispatch(logout())
+    dispatch(reset())
+    navigate('/')
+  }
+
   return (
-    <div className='container'>
-      <div className='navbar'>
-        <img src='../logo.jpg' alt='Logo' className='logo'></img>
-        <nav>
-          <ul>
-            <li><link>{<Home/>}</link>Home</li>
-            <li><link>{<HowItWorks/>}</link>How It Works</li>
-            <li><link>{<Accomodation/>}</link>Accomodation</li>
-            <li><link>{<FeedBack/>}</link>Feedback</li>
-            <li><link>{<About/>}</link>About Us</li>
-            <li><link>{<Register/>}</link>Register</li>
-            <li><link>{<Login/>}</link>Login</li>
-          </ul>
-        </nav>
+    <header className='header'>
+      <div className='logo'>
+        <Link to='/'>Home</Link>
       </div>
-    </div>
+      <ul>
+        <li>
+          <Link to='/howitworks'>
+            <FaRegQuestionCircle /> How it Works
+          </Link>
+        </li>
+        <li>
+          <Link to='/accomodation'>
+            <FaRegBuilding /> Accomodation
+          </Link>
+        </li>
+        <li>
+          <Link to='/feedback'>
+            <FaRegCommentDots /> Feedback
+          </Link>
+        </li>
+        <li>
+          <Link to='/about'>
+            <FaLandmark /> About Us
+          </Link>
+        </li>
+        {user ? (
+          <li>
+            <button className='btn' onClick={onLogout}>
+              <FaSignOutAlt /> Logout
+            </button>
+          </li>
+        ) : (
+          <>
+            <li>
+              <Link to='/login'>
+                <FaSignInAlt /> Login
+              </Link>
+            </li>
+            <li>
+              <Link to='/register'>
+                <FaUser /> Register
+              </Link>
+            </li>
+          </>
+        )}
+      </ul>
+    </header>
   )
 }
 
-export default Header;
+export default Header
