@@ -1,58 +1,32 @@
 import '../header.css'
 import React, { useState } from "react";
+import Home from '../pages/Home'
+import Accomodation from '../pages/Accomodation'
+import FeedBack from '../pages/Feedback'
+import About from '../pages/About'
+import Register from '../pages/Register'
+import Login from '../pages/Login'
+import HowItWorks from './HowItWorks';
 
 function Header() {
-  const [active, setActive] = useState("nav__menu");
-  const [icon, setIcon] = useState("nav__toggler");
-  const navToggle = () => {
-    if (active === "nav__menu") {
-      setActive("nav__menu nav__active");
-    } else setActive("nav__menu");
-
-    // Icon Toggler
-    if (icon === "nav__toggler") {
-      setIcon("nav__toggler toggle");
-    } else setIcon("nav__toggler");
-  };
   return (
-    <nav className="nav">
-      <a href="#" className="nav__brand">
-        herdoy
-      </a>
-      <ul className={active}>
-        <li className="nav__item">
-          <a href="#" className="nav__link">
-            Home
-          </a>
-        </li>
-        <li className="nav__item">
-          <a href="#" className="nav__link">
-            About
-          </a>
-        </li>
-        <li className="nav__item">
-          <a href="#" className="nav__link">
-            Portfolio
-          </a>
-        </li>
-        <li className="nav__item">
-          <a href="#" className="nav__link">
-            Skills
-          </a>
-        </li>
-        <li className="nav__item">
-          <a href="#" className="nav__link">
-            Contact
-          </a>
-        </li>
-      </ul>
-      <div onClick={navToggle} className={icon}>
-        <div className="line1"></div>
-        <div className="line2"></div>
-        <div className="line3"></div>
+    <div className='container'>
+      <div className='navbar'>
+        <img src='../logo.jpg' alt='Logo' className='logo'></img>
+        <nav>
+          <ul>
+            <li><link>{<Home/>}</link>Home</li>
+            <li><link>{<HowItWorks/>}</link>How It Works</li>
+            <li><link>{<Accomodation/>}</link>Accomodation</li>
+            <li><link>{<FeedBack/>}</link>Feedback</li>
+            <li><link>{<About/>}</link>About Us</li>
+            <li><link>{<Register/>}</link>Register</li>
+            <li><link>{<Login/>}</link>Login</li>
+          </ul>
+        </nav>
       </div>
-    </nav>
-  );
+    </div>
+  )
 }
 
 export default Header;
