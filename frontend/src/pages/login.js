@@ -5,7 +5,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { login, reset } from '../features/auth/authSlice';
-import { HeaderContainer, FooterContainer } from '../containers';
+import Header from './Header';
+import FooterContainer from './FooterContainer';
 import Spinner from '../components/Spinner';
 
 
@@ -58,7 +59,7 @@ function Loginn() {
   
   return (
     <>
-      <HeaderContainer />
+      <Header />
       <div className='container'>
         <section className='heading'>
           <h1>

@@ -15,7 +15,7 @@ function Header() {
   }
 
   return (
-    <header className='header'>
+    <Header className='header'>
       <div className='logo'>
         <Link to='/'>Home</Link>
       </div>
@@ -61,7 +61,7 @@ function Header() {
           </>
         )}
       </ul>
-    </header>
+    </Header>
   )
 }
 

@@ -4,7 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { FaUser } from 'react-icons/fa';
 import { register, reset } from '../features/auth/authSlice';
-import { HeaderContainer, FooterContainer } from '../containers';
+import Header from './Header';
+import FooterContainer from '../pages/FooterContainer'
 import Spinner from '../components/Spinner';
 
 function Register() {
@@ -67,7 +68,7 @@ function Register() {
   }
   return (
     <>
-      <HeaderContainer />
+      <Header />
       <div className='container'>
         <section className='heading'>
           <h1>
@@ -75,7 +76,6 @@ function Register() {
           </h1>
           <p>Please create an account</p>
         </section>
-
         <section className='form'>
           <form onSubmit={onSubmit}>
             <div className='form-group'>
