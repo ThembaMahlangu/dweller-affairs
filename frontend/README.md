@@ -1,44 +1,23 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# React-Dweller-Affairs-Booking-Website-Template
 
-## Available Scripts
+[<img alt="React Website Tutorial Tour & Travel" width="100%" src="https://github.com/tech2etc/Youtube-Tutorials/blob/main/React-Trippy-Tour-Travel-Website.PNG?raw=true" />](https://youtu.be/0dOSLhPzSGI)
 
-In the project directory, you can run:
+Hi everyone, welcome to our new react js website tutorial. In this tutorial, We will create a responsive tour and travel website using react js.
 
-### `npm start`
+This is an empty react js template. You will get all the images and empty files here.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Without wasting your time, let's see what react js actually is...
+- React is a JavaScript library for building user-friendly interfaces.
+- It is Used to build single-page applications.
+- Also, it allows us to create reusable UI components.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+# Setup
+1. Open Your VS Code(If you dont want to use codesandbox).
+2. Download this project.
+3. Drag and drop this project inside VS code.
+4. Open a terminal & run this command.
+ run ```npm i && npm start```
+ 
+Get the full source code from [here1](https://www.buymeacoffee.com/tech2etc/e/92489).
+Get the full source code from [here2](https://ko-fi.com/s/7d1fc65e68).
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
