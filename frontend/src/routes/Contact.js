@@ -7,7 +7,7 @@ import ContactForm from "../components/ContactForm";
 function Contact() {
   return (
     <>
-      <h1>Call The Components</h1>
+      <h1>This is contact us form</h1>
     </>
   );
 }

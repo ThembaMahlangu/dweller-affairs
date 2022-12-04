@@ -23,7 +23,7 @@
 
 .nav-menu {
     display: grid;
-    grid-template-columns: repeat(7, auto);
+    grid-template-columns: repeat(8, auto);
     grid-gap: 10px;
     list-style: none;
     align-items: center;
@@ -43,7 +43,7 @@
 }
 
 .nav-links:hover {
-    background-color: #01959a;
+    background-color: purple;
     color: #fff;
     border-radius: 4px;
     transition: all 0.2s ease-in-out;
@@ -111,7 +111,7 @@ button:hover {
     }
 
     .nav-links:hover {
-        background: #01959a;
+        background: purple;
         transition: none;
     }
 
@@ -126,7 +126,7 @@ button:hover {
         margin: auto;
         border-radius: 4px;
         width: 80%;
-        background: #01959a;
+        background: purple;
         text-decoration: none;
         color: #fff;
         font-size: 1.2rem;

@@ -1,7 +1,7 @@
 import { Component } from "react";
-import "./DestinationStyles.css";
+import "./AccomodationStyles.css";
 
-class DestinationData extends Component {
+class PropertyData extends Component {
   render() {
     return (
       <div>
@@ -11,4 +11,4 @@ class DestinationData extends Component {
   }
 }
 
-export default DestinationData;
+export default PropertyData;

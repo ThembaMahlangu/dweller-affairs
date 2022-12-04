@@ -7,7 +7,7 @@ import AboutUs from "../components/AboutUs";
 function About() {
   return (
     <>
-      <h1>Call The Components</h1>
+      <h1>This is About</h1>
     </>
   );
 }
