@@ -1,10 +1,11 @@
 import "./AboutUsStyles.css";
+import Hero from "./Hero";
+import Navbar from "./Navbar";
 
 function AboutUs() {
   return (
-    <div className="about-container">
-      <h1>Your Code Here</h1>
-    </div>
+    <>
+    </>
   );
 }
 

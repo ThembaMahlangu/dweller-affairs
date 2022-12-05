@@ -3,8 +3,15 @@ import "./HeroStyles.css";
 function Hero(props) {
   return (
     <>
-      <div className="hero">
-        <img alt="Home Picture" src="https://i0.wp.com/roadsandkingdoms.com/uploads/2018/08/JohannesburgLANDSCAPE.jpg?ssl=1&resize=1300%2C940&quality=92&strip=color"/>
+      <div className={props.cName}>
+        <img alt="Home Picture" src={props.heroImg}/>
+        <div className="hero-text">
+          <h1>{props.title}</h1>
+          <p>{props.text}</p>
+          <a href={props.url} className={props.btnClass}>
+            {props.buttonText}
+          </a>
+        </div>
       </div>
     </>
   );

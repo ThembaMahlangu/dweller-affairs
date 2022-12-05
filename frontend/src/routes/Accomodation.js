@@ -1,14 +1,19 @@
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
-import AboutImg from "../assets/night.jpg";
+import AboutImg from "../assets/2.jpg";
 import Footer from "../components/Footer";
 import AboutUs from "../components/AboutUs";
 
 function Accomodation() {
     return (
       <>
-        <h1>This is Accomodation</h1>
         <Navbar/>
+        <Hero
+          cName="hero-about"
+          heroImg={AboutImg}
+          title="Accomodation Partners"
+          btnClass="hide"
+        />
       </>
     );
   }
