@@ -14,6 +14,7 @@ function About() {
         title="About Us"
         btnClass="hide"
       />
+      <AboutUs/>
       <Footer/>
     </>
   );

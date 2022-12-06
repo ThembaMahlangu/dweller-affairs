@@ -58,6 +58,9 @@ const Footer = () => {
           <a href="/">License</a>
         </div>
       </div>
+      <div className="copyright">
+        <p>Dweller Affairs Copyright 2023. Designed by EazieCode</p>
+      </div>
     </div>
   );
 };

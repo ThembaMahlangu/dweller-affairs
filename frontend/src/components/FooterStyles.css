@@ -48,6 +48,14 @@
     font-size: 1.1rem;
 }
 
+.copyright {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding-top: 2.2rem;
+    height: 10px;
+}
+
 @media screen and (max-width: 850px) {
     .footer {
         padding: 4rem 2rem;

@@ -2,7 +2,7 @@ import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import AboutImg from "../assets/2.jpg";
 import Footer from "../components/Footer";
-import AboutUs from "../components/AboutUs";
+import PropertySingle from "../components/PropertySingle";
 
 function Accomodation() {
     return (
@@ -14,6 +14,7 @@ function Accomodation() {
           title="Accomodation Partners"
           btnClass="hide"
         />
+        <PropertySingle/>
         <Footer/>
       </>
     );
