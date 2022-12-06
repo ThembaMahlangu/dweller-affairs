@@ -29,8 +29,8 @@ class Navbar extends Component {
           </li>
             )
           })}
-          <button>Register</button>
-          <button>Login</button>
+          <button><Link style={{textDecoration: 'none', color: "inherit"}} to="/register">Register</Link></button>
+          <button><Link style={{textDecoration: 'none', color: "inherit"}} to="/login">Login</Link></button>
         </ul>
       </nav>
     );
