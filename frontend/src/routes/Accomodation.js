@@ -14,6 +14,7 @@ function Accomodation() {
           title="Accomodation Partners"
           btnClass="hide"
         />
+        <Footer/>
       </>
     );
   }

@@ -2,7 +2,8 @@ import Property from "../components/Property";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
-import Trip from "../components/Trip";
+import Trip from "../components/PropertySingle";
+import PropertySingle from "../components/PropertySingle";
 
 function Home() {
   return (
@@ -18,6 +19,8 @@ function Home() {
         btnClass="show"
       />
       <Property/>
+      <PropertySingle/>
+      <Footer/>
     </>
   );
 }
