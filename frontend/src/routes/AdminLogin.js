@@ -1,17 +1,16 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import Hero from '../components/Hero';
-import '../components/ContactFormStyles.css';
+import Footer from '../components/Footer';
 
-function Login() {
+function AdminLogin() {
   return (
     <>
-        <Navbar/>
+      <Navbar/>
         <Hero
             cName = "hero-about"
             heroImg = {"https://www.xtraspace.co.za/sites/default/files/the-leonardo.jpg"}
-            title = "Login"
+            title = "Admin Login"
             text = "Welcome back! Please login below"
         />
         <div className="form-container">
@@ -26,4 +25,4 @@ function Login() {
   )
 }
 
-export default Login
+export default AdminLogin

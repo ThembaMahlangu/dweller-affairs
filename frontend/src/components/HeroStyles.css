@@ -11,6 +11,18 @@
     position: relative;
 }
 
+.hero-accomodation {
+    width: 100%;
+    height: 70vh;
+    position: relative;
+}
+
+.hero-contact {
+    width: 100%;
+    height: 70vh;
+    position: relative;
+}
+
 .hero-user {
     width: 100%;
     height: 50vh;

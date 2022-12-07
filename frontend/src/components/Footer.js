@@ -29,19 +29,19 @@ const Footer = () => {
 
       <div className="bottom">
         <div>
-          <h4>Project</h4>
-          <a href="/">ChangeLog</a>
-          <a href="/">Status</a>
-          <a href="/">License</a>
-          <a href="/">All Versions</a>
+          <h4>Partner Links</h4>
+          <a href="/partnerlogin">Partner Login</a>
+          <a href="/partnerregister">Register Partner</a>
+          <a href="/contact">Partner Support</a>
+          <a href="/singleproperty">Test Links</a>
         </div>
 
         <div>
-          <h4>Community</h4>
-          <a href="/">Github</a>
-          <a href="/">Issues</a>
-          <a href="/">Project</a>
-          <a href="/">Twitter</a>
+          <h4>Important</h4>
+          <a href="/adminlogin">Admin Login</a>
+          <a href="/adminlogin">Careers</a>
+          <a href="/admindashboard">Test Link 1</a>
+          <a href="/partnerdashboard">Test Link 2</a>
         </div>
 
         <div>
