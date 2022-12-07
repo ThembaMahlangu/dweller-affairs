@@ -9,7 +9,7 @@ function Accomodation() {
         <Navbar/>
         <Hero
           cName="hero-accomodation"
-          heroImg={"https://primestone.com/wp-content/uploads/2020/04/Smart-Buildings-1.jpg"}
+          heroImg={"https://www.sgs.com/-/media/sgscorp/images/industries-and-environment/green-buildings.cdn.en-ZA.1.jpeg"}
           title="Accomodation Partners" 
           btnClass="hide"
         />
