@@ -2,7 +2,6 @@ import Property from "../components/Property";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
-import Trip from "../components/PropertySingle";
 import PropertySingle from "../components/PropertySingle";
 
 function Home() {
@@ -14,8 +13,8 @@ function Home() {
         heroImg="https://i0.wp.com/roadsandkingdoms.com/uploads/2018/08/JohannesburgLANDSCAPE.jpg?ssl=1&resize=1300%2C940&quality=92&strip=color"
         title="Finding Accomodation Simplified"
         text="Choose Your Next Apartment."
-        buttonText="Apartment List"
-        url="/"
+        buttonText="Book Now"
+        url="/accomodation"
         btnClass="show"
       />
       <Property/>

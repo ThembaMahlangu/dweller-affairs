@@ -25,13 +25,8 @@ export const MenuItems = [
     icon : "fa-solid fa-address-book"
   },
   {
-    title : "Register",
-    url : "/register",
-    cName : "nav-links-mobile",
-  },
-  {
-    title : "Login",
-    url : "/login",
+    title : "Partner Login",
+    url : "/partnerlogin",
     cName : "nav-links-mobile",
   },
 ];

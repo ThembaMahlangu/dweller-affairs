@@ -1,6 +1,6 @@
 /* Style your components */
 .NavbarItems {
-    background-color: transparent;
+    background-color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,7 +24,7 @@
 
 .nav-menu {
     display: grid;
-    grid-template-columns: repeat(8, auto);
+    grid-template-columns: repeat(7, auto);
     grid-gap: 10px;
     list-style: none;
     align-items: center;

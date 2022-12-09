@@ -10,6 +10,7 @@ class Navbar extends Component {
   handleClick = () => {
     this.setState({ clicked: !this.state.clicked})
   }
+
   render() {
     return (
       <nav className="NavbarItems">
@@ -29,8 +30,7 @@ class Navbar extends Component {
           </li>
             )
           })}
-          <button><Link style={{textDecoration: 'none', color: "inherit"}} to="/register">Register</Link></button>
-          <button><Link style={{textDecoration: 'none', color: "inherit"}} to="/login">Login</Link></button>
+          <button><Link style={{textDecoration: 'none', color: "inherit"}} to="/partnerlogin">Partner Login</Link></button>
         </ul>
       </nav>
     );

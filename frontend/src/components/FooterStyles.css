@@ -52,8 +52,12 @@
     display: flex;
     justify-content: center;
     margin: 0;
-    padding-top: 2.2rem;
-    height: 10px;
+    margin-top: 2.2rem;
+}
+
+.copyright-content {
+    background: white;
+    color: #000;
 }
 
 @media screen and (max-width: 850px) {

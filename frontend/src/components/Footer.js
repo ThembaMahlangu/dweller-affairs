@@ -29,19 +29,26 @@ const Footer = () => {
 
       <div className="bottom">
         <div>
-          <h4>Partner Links</h4>
-          <a href="/partnerlogin">Partner Login</a>
-          <a href="/partnerregister">Register Partner</a>
-          <a href="/contact">Partner Support</a>
-          <a href="/singleproperty">Test Links</a>
+          <h4>Get in touch</h4>
+          <a>Email: info@dwelleraffairs.co.za</a>
+          <a>Tel: 011 936 0246</a>
+          <a>WhatsApp: wa/me/dwellers</a>
         </div>
 
         <div>
-          <h4>Important</h4>
-          <a href="/adminlogin">Admin Login</a>
-          <a href="/adminlogin">Careers</a>
-          <a href="/admindashboard">Test Link 1</a>
-          <a href="/partnerdashboard">Test Link 2</a>
+          <h4>Business Solutions</h4>
+          <a href="/suggestions">Suggest Feature</a>
+          <a href="/partnerregister">Partner Registration</a>
+          <a href="/contact">Partner Support</a>
+          <a href="/sponsors">Sponsor Us</a>
+        </div>
+
+        <div>
+          <h4>Important Links</h4>
+          <a href="/">Developer Volunteering</a>
+          <a href="/">Careers</a>
+          <a href="/">Feedback</a>
+          <a href="/">Partner Hunters</a>
         </div>
 
         <div>
@@ -49,17 +56,19 @@ const Footer = () => {
           <a href="/">Support</a>
           <a href="/">Troubleshooting</a>
           <a href="/contact">Contact Us</a>
+          <a href="/bookingform">Booking Page</a>
         </div>
 
         <div>
           <h4>Others</h4>
-          <a href="/">Terms of service</a>
-          <a href="/">Privacy Policy</a>
-          <a href="/">License</a>
+          <a href="/addp">Terms of service</a>
+          <a href="/admindashboard">Privacy Policy</a>
+          <a href="/partnerdashboard">License</a>
         </div>
+
       </div>
       <div className="copyright">
-        <p>Dweller Affairs Copyright 2023. Designed by EazieCode</p>
+        <p className="copyright-content">2023 Copyright Dweller Affairs. Designed by EazieCode</p>
       </div>
     </div>
   );
