@@ -50,14 +50,23 @@
 
 .copyright {
     display: flex;
-    justify-content: center;
-    margin: 0;
-    margin-top: 2.2rem;
+    justify-content: space-between;
+  padding:1.4em 6em;
+  background: #000;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  border-top: 2px solid ;
+    /* margin: 0; */
+    /* margin-top: 2.2rem; */
 }
 
 .copyright-content {
-    background: white;
-    color: #000;
+    display: flex;
+    /* justify-content: space-between; */
+    /* align-items: flex-end; */
+    /* background: white; */
+    /* color: #000; */
 }
 
 @media screen and (max-width: 850px) {
