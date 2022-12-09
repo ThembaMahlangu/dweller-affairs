@@ -1,22 +1,32 @@
 {
-  "name": "backend",
+  "name": "dweller-affairs",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "description": "IN ORDER TO RUN THIS PROJECT ON YOUR LOCAL HOST\r 1. Install the neccesary dependancies for each side(client and server) using the command \"npm i\"\r 2. Run the server with \"npm start\"(Frontend) and \"nodemon start\"(Backend)",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "server": "nodemon server.js",
-    "start": "node server.js",
-    "client": "npm start --prefix frontend"
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThembaMahlangu/dweller-affairs.git"
   },
   "author": "",
-  "license": "MIT",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThembaMahlangu/dweller-affairs/issues"
+  },
+  "homepage": "https://github.com/ThembaMahlangu/dweller-affairs#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "colors": "^1.4.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "express-async-handler": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.7.2"
+    "mongoose": "^6.8.0",
+    "nodemailer": "^6.8.0",
+    "nodemon": "^2.0.20"
   }
 }
