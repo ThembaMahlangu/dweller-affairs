@@ -1,5 +1,6 @@
 import PartnerSchema from "../models/partnerModel.js";
 import { errorHandler } from "../middlewares/errorHandler.js";
+import { sendEmail } from "../utils/sendEmail.js";
 
 export const register = async (req, res, next) => {
   const { name, email, password } = req.body;
