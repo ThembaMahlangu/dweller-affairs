@@ -190,9 +190,6 @@ declare module 'mongoose' {
     /** Returns the list of paths that have been modified. */
     modifiedPaths(options?: { includeChildren?: boolean }): Array<string>;
 
-    /** The name of the model */
-    modelName: string;
-
     /**
      * Overwrite all values in this document with the values of `obj`, except
      * for immutable properties. Behaves similarly to `set()`, except for it
@@ -223,7 +220,7 @@ declare module 'mongoose' {
     /** Sends a replaceOne command with this document `_id` as the query selector. */
     replaceOne(replacement?: AnyObject, options?: QueryOptions | null, callback?: Callback): Query<any, this>;
 
-    /** Saves this document by inserting a new document into the database if [document.isNew](/docs/api.html#document_Document-isNew) is `true`, or sends an [updateOne](/docs/api.html#document_Document-updateOne) operation with just the modified paths if `isNew` is `false`. */
+    /** Saves this document by inserting a new document into the database if [document.isNew](/docs/api/document.html#document_Document-isNew) is `true`, or sends an [updateOne](/docs/api/document.html#document_Document-updateOne) operation with just the modified paths if `isNew` is `false`. */
     save(options: SaveOptions, callback: Callback<this>): void;
     save(callback: Callback<this>): void;
     save(options?: SaveOptions): Promise<this>;
