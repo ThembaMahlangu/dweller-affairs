@@ -1,4 +1,6 @@
 import nodemailer from "nodemailer";
+import hbs from "nodemailer-express-handlebars";
+
 export const sendEmail = async (email, subject, text) => {
   try {
     const transporter = nodemailer.createTransport({
@@ -11,11 +13,26 @@ export const sendEmail = async (email, subject, text) => {
         pass: process.env.PASS,
       },
     });
+    transporter.use(
+      "compile",
+      hbs({
+        viewEngine: {
+          extName: ".handlebars",
+          partialsDir: "./views",
+          defaultLayout: false,
+        },
+        viewPath: "./views",
+        extName: ".handlebars",
+      })
+    );
     await transporter.sendMail({
       from: process.env.USER,
       to: email,
       subject,
-      text: HTML_TEMPLATE(text),
+      template: "verifyEmail",
+      context: {
+        token: text,
+      },
     });
     console.log("email sent");
   } catch (error) {
