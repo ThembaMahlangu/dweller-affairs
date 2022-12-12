@@ -13,6 +13,7 @@
     margin-top: 3rem;
     display: flex;
     justify-content: space-between;
+    border: 2px solid rgb(247, 246, 246);
 }
 
 .p-card {
@@ -22,6 +23,7 @@
     border-radius: 7px;
     cursor: pointer ;
     padding: 1rem 0.8rem;
+    background-color: rgb(161, 161, 161);
 }
 
 .p-image {
@@ -46,6 +48,11 @@
     padding: 0.9rem 0 0.2rem 0;
 }
 
+.p-card h3 {
+    font-size: 1rem;
+    color: purple;
+}
+
 @media screen and (max-width: 850px) {
     .property {
         margin: 4rem 2rem;
@@ -59,4 +66,8 @@
         width: 100%;
         margin-bottom: 1.5rem;
     }
+
+    .p-card button {
+    display: inline;
+}
 }

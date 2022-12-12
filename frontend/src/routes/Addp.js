@@ -16,9 +16,13 @@ function Addp() {
             />
             <div className="form-container">
                 <form>
+                    <label>Partner Name</label>
                     <input placeholder="Company Name"/>
+                    <label>Email</label>
                     <input placeholder="Email"/>
+                    <label>Password</label>
                     <input placeholder="Enter Your Password"/>
+                    <label>Confirm Password</label>
                     <input placeholder="Please Confirm Your Password"/>
                     <button>Register</button>
                 </form>

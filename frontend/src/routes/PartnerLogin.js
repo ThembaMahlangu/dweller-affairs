@@ -15,7 +15,9 @@ function PartnerLogin() {
         />
         <div className="form-container">
             <form>
+                <label>Email</label>
                 <input placeholder="Email"/>
+                <label>Password</label>
                 <input placeholder="Enter Your Password"/>
                 <button>Login</button>
             </form>
