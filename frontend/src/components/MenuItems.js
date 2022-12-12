@@ -24,9 +24,4 @@ export const MenuItems = [
     cName : "nav-links",
     icon : "fa-solid fa-address-book"
   },
-  {
-    title : "Partner Login",
-    url : "/partnerlogin",
-    cName : "nav-links-mobile",
-  },
 ];

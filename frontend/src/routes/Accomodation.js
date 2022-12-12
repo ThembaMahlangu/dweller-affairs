@@ -1,7 +1,7 @@
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import PropertySingle from "../components/PropertySingle";
+import AccomodationList from "../components/AccomodationList";
 
 function Accomodation() {
     return (
@@ -13,7 +13,7 @@ function Accomodation() {
           title="Accomodation Partners" 
           btnClass="hide"
         />
-        <PropertySingle/>
+        <AccomodationList/>
         <Footer/>
       </>
     );
