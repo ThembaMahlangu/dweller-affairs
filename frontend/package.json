@@ -14,14 +14,15 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-router-dom": "6.4.0",
-    "react-scripts": "4.0.0"
+    "react-icons": "^4.7.1",
+    "react-router-dom": "^6.4.3",
+    "react-scripts": "^5.0.1"
   },
   "devDependencies": {
     "@babel/runtime": "7.13.8"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
