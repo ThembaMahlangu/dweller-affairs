@@ -12,10 +12,12 @@ import AdminDashboard from "./routes/AdminDashboard";
 import AdminLogin from "./routes/AdminLogin";
 import Addp from "./routes/Addp";
 import BookingForm from "./routes/BookingForm";
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
   return (
     <div className="App">
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/accomodation" element={<Accomodation/>}/>
