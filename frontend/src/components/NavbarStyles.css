@@ -88,7 +88,7 @@ button:hover {
         height: auto;
         position: absolute;
         top: 0;
-        left: -100%;
+        left: -120%;
         opacity: 1;
         align-items: stretch;
         padding: 80px 0 30px 0;
