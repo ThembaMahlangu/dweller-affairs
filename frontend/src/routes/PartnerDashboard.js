@@ -1,21 +1,22 @@
-import React from 'react';
-import Navbar from '../components/Navbar';
-import Hero from '../components/Hero';
-import Footer from '../components/Footer';
+import React from "react";
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import Footer from "../components/Footer";
 
 function PartnerDashboard() {
   return (
     <>
-      <Navbar/>
+      <Navbar />
       <Hero
         cName="hero-contact"
         heroImg={"https://s.inyourpocket.com/gallery/218273.jpg"}
         title="Partner Dashboard"
         btnClass="hide"
       />
-      <Footer/>
+      <div></div>
+      <Footer />
     </>
-  )
+  );
 }
 
-export default PartnerDashboard
+export default PartnerDashboard;

@@ -1,0 +1,10 @@
+NODE_ENV = development
+PORT = 8000
+MONGO_URI = Your MONGO_URI
+JWT_SECRET = your jwt key (it can be anything)
+
+EMAIL_PORT = 587
+USER = your email address which will be used to send a new registered partner an account verification email
+PASS = a passcode which will be generated to you by google
+EMAIL_CON_KEY = a passcode you'll use in sending account verification email to newly registered partners (it can be anything)
+BASE_URL = http://localhost:8000

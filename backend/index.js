@@ -4,15 +4,17 @@ import { connection } from "./utils/db.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import authRoutes from "./routes/authRoutes.js";
+import bookingRoutes from "./routes/bookingRoutes.js";
 dotenv.config();
 
 const app = express();
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors());
+app.use(cors({ origin: true, credentials: true }));
 
 app.use("/api/auth", authRoutes);
+app.use("/api/booking", bookingRoutes);
 
 app.use((err, req, res, next) => {
   const status = err.status || 500;
