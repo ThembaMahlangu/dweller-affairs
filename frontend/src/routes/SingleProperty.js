@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ImageSlider from "../components/ImageSlider";
 import Hero from "../components/Hero";
+import { MapContainer, TileLayer, useMap, Marker, Popup } from "react-leaflet";
+
 import {
   BsFillArrowRightSquareFill,
   BsFillArrowLeftSquareFill,
@@ -26,10 +28,10 @@ function SingleProperty() {
       url: "https://orlandotowers.org/wp-content/themes/orlandotowers_v1/assets/bg_7.jpg",
       title: "city",
     },
-    {
-      url: "https://img.gumtree.co.za/api/v1/za-ads/images/b1/b1bbf6ca-4fd5-4418-951f-e763839ee880?rule=s-I85.auto",
-      title: "italy",
-    },
+    // {
+    //   url: "https://img.gumtree.co.za/api/v1/za-ads/images/b1/b1bbf6ca-4fd5-4418-951f-e763839ee880?rule=s-I85.auto",
+    //   title: "italy",
+    // },
   ];
   const containerStyles = {
     width: "500px",
@@ -37,13 +39,50 @@ function SingleProperty() {
     margin: "0 auto",
   };
 
+  const [num, setNum] = useState(0);
+  const next = () => {
+    console.log("next");
+    if (num < slides.length - 1) {
+      setNum((prev) => prev + 1);
+      console.log(num);
+      console.log(slides.length);
+    } else {
+      setNum(0);
+    }
+  };
+  const prev = () => {
+    console.log("prev");
+    if (num > 0 && num < slides.length - 1) {
+      setNum((prev) => prev - 1);
+      console.log(`num is ${num}`);
+    } else {
+      setNum(0);
+    }
+  };
+  // const autoscroll = () => {
+  //   console.log("scrolling");
+
+  //   if (num < slides.length - 1) {
+  //     setNum((prev) => prev + 1);
+  //     console.log(num);
+  //     // return;
+  //     // console.log(slides.length);
+  //   } else {
+  //     setNum(prev=>prev*0);
+  //     console.log("this is");
+  //     return;
+  //   }
+  //   // if (num > slides.length - 1) {
+  //   // }
+  // };
+  // setInterval(autoscroll, 5000);
   const styles = {
     wrapper: {
       height: "100vh",
     },
     imgCon: {
       // border: "2px solid red",
-      height: `70vh`,
+      height: `65vh`,
       width: "80%",
       margin: "auto",
       position: "relative",
@@ -52,7 +91,7 @@ function SingleProperty() {
       overflow: "hidden",
     },
     section: {
-      // border: "2px solid blue",
+      border: "2px solid blue",
       position: `relative`,
       display: "flex",
       justifyContent: "center",
@@ -110,7 +149,7 @@ function SingleProperty() {
       width: "25em",
       height: "25em",
       left: "2em",
-      margin:'20px',
+      margin: "20px",
       // zIndex:'3',
       display: "flex",
       flexDirection: "column",
@@ -119,26 +158,35 @@ function SingleProperty() {
       fontSize: "4em",
       lineHeight: "1.1em",
       textAlign: "left",
-      
+
       // justifySelf:'flex-start',
     },
     span: {
       // border: "2px solid red",
-      marginBottom:'5em',
-      color:'white',
-      fontSize:'20px'
+      marginBottom: "5em",
+      color: "white",
+      fontSize: "20px",
     },
-    icon:{
-      color:'white',
-      fontSize:'30px',
+    icon: {
+      color: "white",
+      fontSize: "30px",
       // padding:'20px'
     },
-    iconCon:{
+    iconCon: {
       // border:'2px solid red',
-      width:'100px',
-      display:'flex',
-      justifyContent:'space-around'
-    }
+      width: "100px",
+      display: "flex",
+      justifyContent: "space-around",
+    },
+    map: {
+      border: `2px solid red`,
+      height: "35vh",
+      zIndex: "4",
+    },
+    livemap: {
+      overflow: "hidden",
+      // width:'100%',
+    },
   };
 
   return (
@@ -147,13 +195,16 @@ function SingleProperty() {
       <div style={styles.wrapper}>
         <section style={styles.section}>
           <div style={styles.imgCon}>
-            <img style={styles.image} src={slides[0].url} alt="main" />
+            <img style={styles.image} src={slides[num].url} alt="main" />
             <div style={styles.textOverlay}>
               <h1 style={styles.largeText}>Modern House</h1>
               <p style={styles.span}>3 bedrooms,1 kitchen and 2 bathrooms</p>
               <span style={styles.iconCon}>
-                <BsFillArrowLeftSquareFill style={styles.icon} />
-                <BsFillArrowRightSquareFill style={styles.icon} />
+                <BsFillArrowLeftSquareFill onClick={prev} style={styles.icon} />
+                <BsFillArrowRightSquareFill
+                  onClick={next}
+                  style={styles.icon}
+                />
               </span>
             </div>
             <div style={styles.imgSelect}>
@@ -174,6 +225,24 @@ function SingleProperty() {
             <div style={styles.innerOverlay}>overlay</div>
             <div style={styles.innerOverlay}>overlay</div>
           </div>
+        </section>
+        <section style={styles.map}>
+          {/* <MapContainer
+            center={[51.505, -0.09]}
+            zoom={13}
+            scrollWheelZoom={false}
+            style={styles.livemap}
+          >
+            <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+          </MapContainer> */}
+          {/* <Marker position={[51.505, -0.09]}>
+              <Popup>
+                A pretty CSS3 popup. <br /> Easily customizable.
+              </Popup>
+            </Marker> */}
         </section>
       </div>
       {/* <Hero
