@@ -1,16 +1,26 @@
+<<<<<<< HEAD
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
+=======
+import React from "react";
+>>>>>>> c472585 (SingleProperty page layout)
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ImageSlider from "../components/ImageSlider";
 import Hero from "../components/Hero";
+<<<<<<< HEAD
 import { MapContainer, TileLayer, useMap, Marker, Popup } from "react-leaflet";
 
+=======
+>>>>>>> c472585 (SingleProperty page layout)
 import {
   BsFillArrowRightSquareFill,
   BsFillArrowLeftSquareFill,
 } from "react-icons/bs";
+<<<<<<< HEAD
 import ContactForm from "../components/ContactForm";
+=======
+>>>>>>> c472585 (SingleProperty page layout)
 
 function SingleProperty() {
       const form = useRef();
@@ -54,10 +64,17 @@ function SingleProperty() {
       url: "https://orlandotowers.org/wp-content/themes/orlandotowers_v1/assets/bg_7.jpg",
       title: "city",
     },
+<<<<<<< HEAD
     // {
     //   url: "https://img.gumtree.co.za/api/v1/za-ads/images/b1/b1bbf6ca-4fd5-4418-951f-e763839ee880?rule=s-I85.auto",
     //   title: "italy",
     // },
+=======
+    {
+      url: "https://img.gumtree.co.za/api/v1/za-ads/images/b1/b1bbf6ca-4fd5-4418-951f-e763839ee880?rule=s-I85.auto",
+      title: "italy",
+    },
+>>>>>>> c472585 (SingleProperty page layout)
   ];
   const containerStyles = {
     width: "500px",
@@ -65,6 +82,7 @@ function SingleProperty() {
     margin: "0 auto",
   };
 
+<<<<<<< HEAD
   const [num, setNum] = useState(0);
   const next = () => {
     console.log("next");
@@ -102,13 +120,19 @@ function SingleProperty() {
   //   // }
   // };
   // setInterval(autoscroll, 5000);
+=======
+>>>>>>> c472585 (SingleProperty page layout)
   const styles = {
     wrapper: {
       height: "100vh",
     },
     imgCon: {
       // border: "2px solid red",
+<<<<<<< HEAD
       height: `65vh`,
+=======
+      height: `70vh`,
+>>>>>>> c472585 (SingleProperty page layout)
       width: "80%",
       margin: "auto",
       position: "relative",
@@ -124,18 +148,30 @@ function SingleProperty() {
       // position:'relative'
     },
     overlay: {
+<<<<<<< HEAD
       // border: `2px solid yellow`,
+=======
+      border: `2px solid yellow`,
+>>>>>>> c472585 (SingleProperty page layout)
       width: `70%`,
       height: "150px",
       margin: `auto`,
       position: `absolute`,
       bottom: `-70px`,
       borderRadius: "20px",
+<<<<<<< HEAD
       padding: "15px",
       display: "flex",
       // gap: "20px",
       zIndex: "2",
       background: "white",
+=======
+      padding: "20px",
+      display: "flex",
+      gap: "20px",
+      zIndex: "2",
+      background: "pink",
+>>>>>>> c472585 (SingleProperty page layout)
       justifyContent: "space-between",
     },
     imgSelect: {
@@ -152,6 +188,7 @@ function SingleProperty() {
       zIndex: "2",
     },
     innerOverlay: {
+<<<<<<< HEAD
       border: "1px solid gray",
       borderRadius: "10px",
       display: "flex",
@@ -160,6 +197,11 @@ function SingleProperty() {
       alignItems: "flex-start",
 
       minWidth: "220px",
+=======
+      border: "2px solid red",
+      borderRadius: "10px",
+      width: "200px",
+>>>>>>> c472585 (SingleProperty page layout)
     },
     imgSmall: {
       margin: "6px",
@@ -180,7 +222,11 @@ function SingleProperty() {
       width: "25em",
       height: "25em",
       left: "2em",
+<<<<<<< HEAD
       margin: "20px",
+=======
+      margin:'20px',
+>>>>>>> c472585 (SingleProperty page layout)
       // zIndex:'3',
       display: "flex",
       flexDirection: "column",
@@ -189,11 +235,16 @@ function SingleProperty() {
       fontSize: "4em",
       lineHeight: "1.1em",
       textAlign: "left",
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> c472585 (SingleProperty page layout)
       // justifySelf:'flex-start',
     },
     span: {
       // border: "2px solid red",
+<<<<<<< HEAD
       marginBottom: "5em",
       marginTop: "1em",
       color: "white",
@@ -234,6 +285,23 @@ function SingleProperty() {
     titleDesc: {
       color: "gray",
     },
+=======
+      marginBottom:'5em',
+      color:'white',
+      fontSize:'20px'
+    },
+    icon:{
+      color:'white',
+      fontSize:'30px',
+      // padding:'20px'
+    },
+    iconCon:{
+      // border:'2px solid red',
+      width:'100px',
+      display:'flex',
+      justifyContent:'space-around'
+    }
+>>>>>>> c472585 (SingleProperty page layout)
   };
 
   return (
@@ -242,6 +310,7 @@ function SingleProperty() {
       <div style={styles.wrapper}>
         <section style={styles.section}>
           <div style={styles.imgCon}>
+<<<<<<< HEAD
             <img style={styles.image} src={slides[num].url} alt="main" />
             <div style={styles.textOverlay}>
               <h1 style={styles.largeText}>Modern House</h1>
@@ -253,6 +322,15 @@ function SingleProperty() {
                   onClick={next}
                   style={styles.icon}
                 />
+=======
+            <img style={styles.image} src={slides[0].url} alt="main" />
+            <div style={styles.textOverlay}>
+              <h1 style={styles.largeText}>Modern House</h1>
+              <p style={styles.span}>3 bedrooms,1 kitchen and 2 bathrooms</p>
+              <span style={styles.iconCon}>
+                <BsFillArrowLeftSquareFill style={styles.icon} />
+                <BsFillArrowRightSquareFill style={styles.icon} />
+>>>>>>> c472585 (SingleProperty page layout)
               </span>
             </div>
             <div style={styles.imgSelect}>
@@ -268,6 +346,7 @@ function SingleProperty() {
             </div>
           </div>
           <div style={styles.overlay}>
+<<<<<<< HEAD
             <div style={styles.innerOverlay}>
               <span>City</span>
               <h3 style={styles.title}>Dubai</h3>
@@ -331,6 +410,14 @@ function SingleProperty() {
           <input name="whatsapp" placeholder="What is your WhatsApp Number?" />
           <button type="submit">Submit Booking</button>
         </form>
+=======
+            <div style={styles.innerOverlay}>overlay</div>
+            <div style={styles.innerOverlay}>overlay</div>
+            <div style={styles.innerOverlay}>overlay</div>
+            <div style={styles.innerOverlay}>overlay</div>
+          </div>
+        </section>
+>>>>>>> c472585 (SingleProperty page layout)
       </div>
       {/* <Hero
         cName = "hero-about"
