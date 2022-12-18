@@ -1,45 +1,29 @@
 {
-  "name": "react",
-  "version": "1.0.0",
-  "description": "React example starter project",
-  "keywords": [
-    "react",
-    "starter"
-  ],
-  "main": "src/index.js",
+  "name": "vite-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
   "dependencies": {
-    "@emailjs/browser": "^3.10.0",
-    "@fortawesome/fontawesome-svg-core": "^6.2.1",
-    "@fortawesome/free-solid-svg-icons": "^6.2.1",
-    "@fortawesome/react-fontawesome": "^0.2.0",
-    "avataaars": "^2.0.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+        "@emailjs/browser": "^3.10.0",
     "react-icons": "^4.7.1",
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     "react-leaflet": "^4.2.0",
-=======
->>>>>>> c472585 (SingleProperty page layout)
-=======
->>>>>>> main
     "react-router-dom": "^6.4.3",
     "react-scripts": "^5.0.1",
     "react-toastify": "^9.1.1"
   },
+  
   "devDependencies": {
-    "@babel/runtime": "7.13.8"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.9",
+    "@vitejs/plugin-react": "^3.0.0",
+    "vite": "^4.0.0"
+  }
 }
