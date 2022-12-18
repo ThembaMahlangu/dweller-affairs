@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ImageSlider from "../components/ImageSlider";
@@ -9,8 +10,33 @@ import {
   BsFillArrowRightSquareFill,
   BsFillArrowLeftSquareFill,
 } from "react-icons/bs";
+import ContactForm from "../components/ContactForm";
 
 function SingleProperty() {
+      const form = useRef();
+
+      const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+          .sendForm(
+            "service_mk5j6fc",
+            "template_tyl9ufr",
+            form.current,
+            "alhwLOSp2yLNOem4D"
+          )
+          .then(
+            (result) => {
+              console.log(result.text);
+              console.log("booking sent");
+            },
+            (error) => {
+              console.log(error.text);
+            }
+          );
+        e.target.reset();
+      };
+  
   const slides = [
     {
       url: "https://orlandotowers.org/wp-content/themes/orlandotowers_v1/assets/bg_2.jpg",
@@ -91,25 +117,25 @@ function SingleProperty() {
       overflow: "hidden",
     },
     section: {
-      border: "2px solid blue",
+      // border: "2px solid blue",
       position: `relative`,
       display: "flex",
       justifyContent: "center",
       // position:'relative'
     },
     overlay: {
-      border: `2px solid yellow`,
+      // border: `2px solid yellow`,
       width: `70%`,
       height: "150px",
       margin: `auto`,
       position: `absolute`,
       bottom: `-70px`,
       borderRadius: "20px",
-      padding: "20px",
+      padding: "15px",
       display: "flex",
-      gap: "20px",
+      // gap: "20px",
       zIndex: "2",
-      background: "pink",
+      background: "white",
       justifyContent: "space-between",
     },
     imgSelect: {
@@ -126,9 +152,14 @@ function SingleProperty() {
       zIndex: "2",
     },
     innerOverlay: {
-      border: "2px solid red",
+      border: "1px solid gray",
       borderRadius: "10px",
-      width: "200px",
+      display: "flex",
+      flexDirection: "column",
+      padding: "10px",
+      alignItems: "flex-start",
+
+      minWidth: "220px",
     },
     imgSmall: {
       margin: "6px",
@@ -164,8 +195,18 @@ function SingleProperty() {
     span: {
       // border: "2px solid red",
       marginBottom: "5em",
+      marginTop: "1em",
       color: "white",
       fontSize: "20px",
+      textAlign: "left",
+    },
+    temp: {
+      // border: "2px solid red",
+      // marginBottom: "5em",
+      // marginTop: "1em",
+      color: "white",
+      // fontSize: "20px",
+      textAlign: "left",
     },
     icon: {
       color: "white",
@@ -187,6 +228,12 @@ function SingleProperty() {
       overflow: "hidden",
       // width:'100%',
     },
+    title: {
+      fontSize: "20px",
+    },
+    titleDesc: {
+      color: "gray",
+    },
   };
 
   return (
@@ -199,6 +246,7 @@ function SingleProperty() {
             <div style={styles.textOverlay}>
               <h1 style={styles.largeText}>Modern House</h1>
               <p style={styles.span}>3 bedrooms,1 kitchen and 2 bathrooms</p>
+              <p style={styles.temp}>42&deg;C Very Cool</p>
               <span style={styles.iconCon}>
                 <BsFillArrowLeftSquareFill onClick={prev} style={styles.icon} />
                 <BsFillArrowRightSquareFill
@@ -220,10 +268,26 @@ function SingleProperty() {
             </div>
           </div>
           <div style={styles.overlay}>
-            <div style={styles.innerOverlay}>overlay</div>
-            <div style={styles.innerOverlay}>overlay</div>
-            <div style={styles.innerOverlay}>overlay</div>
-            <div style={styles.innerOverlay}>overlay</div>
+            <div style={styles.innerOverlay}>
+              <span>City</span>
+              <h3 style={styles.title}>Dubai</h3>
+              <p style={styles.titleDesc}>United Arab Emirates</p>
+            </div>{" "}
+            <div style={styles.innerOverlay}>
+              <span>City</span>
+              <h3 style={styles.title}>Dubai</h3>
+              <p style={styles.titleDesc}>United Arab Emirates</p>
+            </div>{" "}
+            <div style={styles.innerOverlay}>
+              <span>City</span>
+              <h3 style={styles.title}>Dubai</h3>
+              <p style={styles.titleDesc}>United Arab Emirates</p>
+            </div>{" "}
+            <div style={styles.innerOverlay}>
+              <span>City</span>
+              <h3 style={styles.title}>Dubai</h3>
+              <p style={styles.titleDesc}>United Arab Emirates</p>
+            </div>
           </div>
         </section>
         <section style={styles.map}>
@@ -244,6 +308,29 @@ function SingleProperty() {
               </Popup>
             </Marker> */}
         </section>
+      </div>
+      <div className="form-container">
+        <form ref={form} onSubmit={sendEmail}>
+          <label>Name</label>
+          <input name="name" placeholder="What is your Full Name?" />
+          <label>Partner</label>
+          <input
+            name="partner"
+            placeholder="Please type the Building Partner Name"
+          />
+          <label>Building</label>
+          <input
+            name="building"
+            placeholder="Name of the building being booked?"
+          />
+          <label>Email</label>
+          <input name="email" placeholder="What is your Email?" />
+          <label>Contact Number</label>
+          <input name="contact" placeholder="What is your contact number?" />
+          <label>WhatsApp</label>
+          <input name="whatsapp" placeholder="What is your WhatsApp Number?" />
+          <button type="submit">Submit Booking</button>
+        </form>
       </div>
       {/* <Hero
         cName = "hero-about"
