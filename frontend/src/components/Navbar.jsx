@@ -2,6 +2,9 @@ import { Component } from "react";
 import "./NavbarStyles.css";
 import { MenuItems } from "./MenuItems";
 import { Link } from "react-router-dom";
+import {HiMenuAlt3} from "react-icons/hi"
+import {FaTimes} from "react-icons/fa"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class Navbar extends Component {
   // Set state
@@ -17,7 +20,9 @@ class Navbar extends Component {
         <h1 className="navbar-logo">Dweller Affairs</h1>
 
           <div className="menu-icons" onClick={this.handleClick}>
-            <i className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}></i>
+            {
+              this.state.clicked?<FaTimes style={{fontSize:'2em'}}/>:<HiMenuAlt3 style={{fontSize:'2em'}}/>
+            }
           </div>
 
         <ul className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
@@ -25,7 +30,7 @@ class Navbar extends Component {
             return (
           <li key={index}>
             <Link className={item.cName} to={item.url}>
-            <i className={item.icon}></i>{item.title}
+              <FontAwesomeIcon icon={item.icon} style={{marginRight:'10px'}}/>{item.title}
             </Link>
           </li>
             )
