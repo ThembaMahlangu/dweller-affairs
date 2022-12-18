@@ -137,6 +137,7 @@ function SingleProperty() {
       zIndex: "2",
       background: "white",
       justifyContent: "space-between",
+      flexWrap:'wrap',
     },
     imgSelect: {
       // border: `2px solid blue`,
