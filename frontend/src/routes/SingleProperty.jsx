@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState,useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -11,6 +11,8 @@ import {
   BsFillArrowLeftSquareFill,
 } from "react-icons/bs";
 import ContactForm from "../components/ContactForm";
+
+
 
 function SingleProperty() {
       const form = useRef();
@@ -54,10 +56,6 @@ function SingleProperty() {
       url: "https://orlandotowers.org/wp-content/themes/orlandotowers_v1/assets/bg_7.jpg",
       title: "city",
     },
-    // {
-    //   url: "https://img.gumtree.co.za/api/v1/za-ads/images/b1/b1bbf6ca-4fd5-4418-951f-e763839ee880?rule=s-I85.auto",
-    //   title: "italy",
-    // },
   ];
   const containerStyles = {
     width: "500px",
@@ -67,17 +65,13 @@ function SingleProperty() {
 
   const [num, setNum] = useState(0);
   const next = () => {
-    console.log("next");
     if (num < slides.length - 1) {
       setNum((prev) => prev + 1);
-      console.log(num);
-      console.log(slides.length);
     } else {
       setNum(0);
     }
   };
   const prev = () => {
-    console.log("prev");
     if (num > 0 && num < slides.length - 1) {
       setNum((prev) => prev - 1);
       console.log(`num is ${num}`);
@@ -85,42 +79,33 @@ function SingleProperty() {
       setNum(0);
     }
   };
-  // const autoscroll = () => {
-  //   console.log("scrolling");
 
-  //   if (num < slides.length - 1) {
-  //     setNum((prev) => prev + 1);
-  //     console.log(num);
-  //     // return;
-  //     // console.log(slides.length);
-  //   } else {
-  //     setNum(prev=>prev*0);
-  //     console.log("this is");
-  //     return;
-  //   }
-  //   // if (num > slides.length - 1) {
-  //   // }
-  // };
-  // setInterval(autoscroll, 5000);
   const styles = {
     wrapper: {
       height: "100vh",
+      userSelect:'none'
     },
     imgCon: {
       // border: "2px solid red",
-      height: `65vh`,
+      height: `70vh`,
       width: "80%",
       margin: "auto",
       position: "relative",
-      margin: "20px",
+      // margin: "20px",
       borderRadius: "20px",
+      margin:'20px auto',
       overflow: "hidden",
+      // marginBlock:'40px '
     },
     section: {
       // border: "2px solid blue",
-      position: `relative`,
-      display: "flex",
-      justifyContent: "center",
+      // position: `relative`,
+      // display: "flex",
+      // flexDirection:'column',
+      // justifyContent: "center",
+      // alignItems: "center",
+
+
       // position:'relative'
     },
     overlay: {
@@ -128,7 +113,7 @@ function SingleProperty() {
       width: `70%`,
       height: "150px",
       margin: `auto`,
-      position: `absolute`,
+      // position: `absolute`,
       bottom: `-70px`,
       borderRadius: "20px",
       padding: "15px",
@@ -158,6 +143,8 @@ function SingleProperty() {
       display: "flex",
       flexDirection: "column",
       padding: "10px",
+    
+      justifyContent:'center',
       alignItems: "flex-start",
 
       minWidth: "220px",
@@ -190,6 +177,7 @@ function SingleProperty() {
       fontSize: "4em",
       lineHeight: "1.1em",
       textAlign: "left",
+      color:'white'
 
       // justifySelf:'flex-start',
     },
@@ -225,8 +213,17 @@ function SingleProperty() {
       height: "35vh",
       zIndex: "4",
     },
-    livemap: {
-      overflow: "hidden",
+    city: {
+      display:'flex',
+      color:'white',
+      // textIndent:'10px',
+      // marginTop:'30px',
+      alignItems: "flex-start",
+      position:'absolute',
+      bottom:'20px',
+      right:'30px',
+
+      // overflow: "hidden",
       // width:'100%',
     },
     title: {
@@ -256,6 +253,7 @@ function SingleProperty() {
                 />
               </span>
             </div>
+              <h3 style={styles.city}>Dubai</h3>
             <div style={styles.imgSelect}>
               <div style={styles.imgSmall}>
                 <img style={styles.image} src={slides[1].url} />
@@ -270,47 +268,30 @@ function SingleProperty() {
           </div>
           <div style={styles.overlay}>
             <div style={styles.innerOverlay}>
-              <span>City</span>
-              <h3 style={styles.title}>Dubai</h3>
-              <p style={styles.titleDesc}>United Arab Emirates</p>
+              <span> 3798 Tetrick Road</span>
+              <h3 style={styles.title}>Tampa</h3>
+              <p style={styles.titleDesc}>Florida</p>
             </div>{" "}
             <div style={styles.innerOverlay}>
-              <span>City</span>
-              <h3 style={styles.title}>Dubai</h3>
+              <span>1 Bedroom</span>
+              <h3 style={styles.title}>$120,000.00</h3>
               <p style={styles.titleDesc}>United Arab Emirates</p>
             </div>{" "}
-            <div style={styles.innerOverlay}>
-              <span>City</span>
-              <h3 style={styles.title}>Dubai</h3>
+                 <div style={styles.innerOverlay}>
+              <span>2 Bedroom</span>
+              <h3 style={styles.title}>$120,000.00</h3>
               <p style={styles.titleDesc}>United Arab Emirates</p>
             </div>{" "}
-            <div style={styles.innerOverlay}>
-              <span>City</span>
-              <h3 style={styles.title}>Dubai</h3>
+                 <div style={styles.innerOverlay}>
+              <span>Utilities</span>
+              <h3 style={styles.title}>$120,000.00</h3>
               <p style={styles.titleDesc}>United Arab Emirates</p>
-            </div>
+            </div>{" "}
           </div>
         </section>
-        <section style={styles.map}>
-          {/* <MapContainer
-            center={[51.505, -0.09]}
-            zoom={13}
-            scrollWheelZoom={false}
-            style={styles.livemap}
-          >
-            <TileLayer
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
-          </MapContainer> */}
-          {/* <Marker position={[51.505, -0.09]}>
-              <Popup>
-                A pretty CSS3 popup. <br /> Easily customizable.
-              </Popup>
-            </Marker> */}
-        </section>
+ 
       </div>
-      <div className="form-container">
+      <div className="form-container" style={{marginTop:'2em'}}>
         <form ref={form} onSubmit={sendEmail}>
           <label>Name</label>
           <input name="name" placeholder="What is your Full Name?" />
