@@ -12,26 +12,17 @@
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "avataaars": "^2.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-icons": "^4.7.1",
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "react-leaflet": "^4.2.0",
-=======
->>>>>>> c472585 (SingleProperty page layout)
-=======
->>>>>>> main
-    "react-router-dom": "^6.4.3",
-    "react-scripts": "^5.0.1",
-    "react-toastify": "^9.1.1"
+    "react-hook-form": "^7.40.0",
+    "react-router-dom": "6.4.0",
+    "react-scripts": "4.0.0"
   },
   "devDependencies": {
     "@babel/runtime": "7.13.8"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
