@@ -1,26 +1,36 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 =======
 import React from "react";
 >>>>>>> c472585 (SingleProperty page layout)
+=======
+import React from "react";
+>>>>>>> main
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ImageSlider from "../components/ImageSlider";
 import Hero from "../components/Hero";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { MapContainer, TileLayer, useMap, Marker, Popup } from "react-leaflet";
 
 =======
 >>>>>>> c472585 (SingleProperty page layout)
+=======
+>>>>>>> main
 import {
   BsFillArrowRightSquareFill,
   BsFillArrowLeftSquareFill,
 } from "react-icons/bs";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import ContactForm from "../components/ContactForm";
 =======
 >>>>>>> c472585 (SingleProperty page layout)
+=======
+>>>>>>> main
 
 function SingleProperty() {
       const form = useRef();
@@ -65,16 +75,22 @@ function SingleProperty() {
       title: "city",
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
     // {
     //   url: "https://img.gumtree.co.za/api/v1/za-ads/images/b1/b1bbf6ca-4fd5-4418-951f-e763839ee880?rule=s-I85.auto",
     //   title: "italy",
     // },
 =======
+=======
+>>>>>>> main
     {
       url: "https://img.gumtree.co.za/api/v1/za-ads/images/b1/b1bbf6ca-4fd5-4418-951f-e763839ee880?rule=s-I85.auto",
       title: "italy",
     },
+<<<<<<< HEAD
 >>>>>>> c472585 (SingleProperty page layout)
+=======
+>>>>>>> main
   ];
   const containerStyles = {
     width: "500px",
@@ -82,6 +98,7 @@ function SingleProperty() {
     margin: "0 auto",
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [num, setNum] = useState(0);
   const next = () => {
@@ -122,6 +139,8 @@ function SingleProperty() {
   // setInterval(autoscroll, 5000);
 =======
 >>>>>>> c472585 (SingleProperty page layout)
+=======
+>>>>>>> main
   const styles = {
     wrapper: {
       height: "100vh",
@@ -129,10 +148,14 @@ function SingleProperty() {
     imgCon: {
       // border: "2px solid red",
 <<<<<<< HEAD
+<<<<<<< HEAD
       height: `65vh`,
 =======
       height: `70vh`,
 >>>>>>> c472585 (SingleProperty page layout)
+=======
+      height: `70vh`,
+>>>>>>> main
       width: "80%",
       margin: "auto",
       position: "relative",
@@ -149,10 +172,14 @@ function SingleProperty() {
     },
     overlay: {
 <<<<<<< HEAD
+<<<<<<< HEAD
       // border: `2px solid yellow`,
 =======
       border: `2px solid yellow`,
 >>>>>>> c472585 (SingleProperty page layout)
+=======
+      border: `2px solid yellow`,
+>>>>>>> main
       width: `70%`,
       height: "150px",
       margin: `auto`,
@@ -160,18 +187,24 @@ function SingleProperty() {
       bottom: `-70px`,
       borderRadius: "20px",
 <<<<<<< HEAD
+<<<<<<< HEAD
       padding: "15px",
       display: "flex",
       // gap: "20px",
       zIndex: "2",
       background: "white",
 =======
+=======
+>>>>>>> main
       padding: "20px",
       display: "flex",
       gap: "20px",
       zIndex: "2",
       background: "pink",
+<<<<<<< HEAD
 >>>>>>> c472585 (SingleProperty page layout)
+=======
+>>>>>>> main
       justifyContent: "space-between",
     },
     imgSelect: {
@@ -189,6 +222,7 @@ function SingleProperty() {
     },
     innerOverlay: {
 <<<<<<< HEAD
+<<<<<<< HEAD
       border: "1px solid gray",
       borderRadius: "10px",
       display: "flex",
@@ -202,6 +236,11 @@ function SingleProperty() {
       borderRadius: "10px",
       width: "200px",
 >>>>>>> c472585 (SingleProperty page layout)
+=======
+      border: "2px solid red",
+      borderRadius: "10px",
+      width: "200px",
+>>>>>>> main
     },
     imgSmall: {
       margin: "6px",
@@ -223,10 +262,14 @@ function SingleProperty() {
       height: "25em",
       left: "2em",
 <<<<<<< HEAD
+<<<<<<< HEAD
       margin: "20px",
 =======
       margin:'20px',
 >>>>>>> c472585 (SingleProperty page layout)
+=======
+      margin:'20px',
+>>>>>>> main
       // zIndex:'3',
       display: "flex",
       flexDirection: "column",
@@ -236,14 +279,19 @@ function SingleProperty() {
       lineHeight: "1.1em",
       textAlign: "left",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       
 >>>>>>> c472585 (SingleProperty page layout)
+=======
+      
+>>>>>>> main
       // justifySelf:'flex-start',
     },
     span: {
       // border: "2px solid red",
+<<<<<<< HEAD
 <<<<<<< HEAD
       marginBottom: "5em",
       marginTop: "1em",
@@ -286,6 +334,8 @@ function SingleProperty() {
       color: "gray",
     },
 =======
+=======
+>>>>>>> main
       marginBottom:'5em',
       color:'white',
       fontSize:'20px'
@@ -301,7 +351,10 @@ function SingleProperty() {
       display:'flex',
       justifyContent:'space-around'
     }
+<<<<<<< HEAD
 >>>>>>> c472585 (SingleProperty page layout)
+=======
+>>>>>>> main
   };
 
   return (
@@ -310,6 +363,7 @@ function SingleProperty() {
       <div style={styles.wrapper}>
         <section style={styles.section}>
           <div style={styles.imgCon}>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <img style={styles.image} src={slides[num].url} alt="main" />
             <div style={styles.textOverlay}>
@@ -323,6 +377,8 @@ function SingleProperty() {
                   style={styles.icon}
                 />
 =======
+=======
+>>>>>>> main
             <img style={styles.image} src={slides[0].url} alt="main" />
             <div style={styles.textOverlay}>
               <h1 style={styles.largeText}>Modern House</h1>
@@ -330,7 +386,10 @@ function SingleProperty() {
               <span style={styles.iconCon}>
                 <BsFillArrowLeftSquareFill style={styles.icon} />
                 <BsFillArrowRightSquareFill style={styles.icon} />
+<<<<<<< HEAD
 >>>>>>> c472585 (SingleProperty page layout)
+=======
+>>>>>>> main
               </span>
             </div>
             <div style={styles.imgSelect}>
@@ -346,6 +405,7 @@ function SingleProperty() {
             </div>
           </div>
           <div style={styles.overlay}>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div style={styles.innerOverlay}>
               <span>City</span>
@@ -411,13 +471,18 @@ function SingleProperty() {
           <button type="submit">Submit Booking</button>
         </form>
 =======
+=======
+>>>>>>> main
             <div style={styles.innerOverlay}>overlay</div>
             <div style={styles.innerOverlay}>overlay</div>
             <div style={styles.innerOverlay}>overlay</div>
             <div style={styles.innerOverlay}>overlay</div>
           </div>
         </section>
+<<<<<<< HEAD
 >>>>>>> c472585 (SingleProperty page layout)
+=======
+>>>>>>> main
       </div>
       {/* <Hero
         cName = "hero-about"
