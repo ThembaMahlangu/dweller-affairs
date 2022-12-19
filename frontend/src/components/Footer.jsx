@@ -29,12 +29,6 @@ const Footer = () => {
         </div>
 
         <div className="bottom">
-          <div>
-            <h4>Get in touch</h4>
-            <a>Email: info@dwelleraffairs.co.za</a>
-            <a>Tel: 011 936 0246</a>
-            <a>WhatsApp: wa/me/dwellers</a>
-          </div>
 
           <div>
             <h4>Business Solutions</h4>
@@ -66,6 +60,14 @@ const Footer = () => {
             <a href="/admindashboard">Privacy Policy</a>
             <a href="/partnerdashboard">License</a>
           </div>
+          
+          <div>
+            <h4>Get in touch</h4>
+            <a>Email: info@dwelleraffairs.co.za</a>
+            <a>Tel: 011 936 0246</a>
+            <a>WhatsApp: wa.me/dwellers</a>
+          </div>
+          
         </div>
       </div>
       <div className="copyright">

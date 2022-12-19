@@ -1,6 +1,7 @@
 import React, { useState,useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Navbar from "../components/Navbar";
+import Onyx from '../assets/onyx.jpg'
 import Footer from "../components/Footer";
 import ImageSlider from "../components/ImageSlider";
 import Hero from "../components/Hero";
@@ -236,7 +237,13 @@ function SingleProperty() {
 
   return (
     <>
-      {/* <Navbar/> */}
+      <Navbar/>
+      <Hero
+        cName = "hero-about"
+          heroImg = {Onyx}
+          title = "iThemba Property: Jewel City"
+          text = "Book for your apartment in one click"
+      />
       <div style={styles.wrapper}>
         <section style={styles.section}>
           <div style={styles.imgCon}>
